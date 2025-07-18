@@ -3,8 +3,8 @@
 Конфигурация рабочего окружения на Arch Linux с [Hyprland](https://github.com/hyprwm/Hyprland).
 
 <p float="left">
-  <img src="scr.png" width="49%" />
-  <img src="scr2.png" width="49%" /> 
+  <img src="src.png" width="49%" />
+  <img src="src2.png" width="49%" /> 
 </p>
 
 ## Состав системы
