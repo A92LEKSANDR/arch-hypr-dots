@@ -1,0 +1,118 @@
+{
+	"height": 30,
+	"width": 980,
+	"margin-top": 10,
+
+	"modules-center": ["hyprland/workspaces"],
+    "modules-left": ["temperature","cpu","memory","network","tray"],
+	"modules-right": ["hyprland/language", "pulseaudio","pulseaudio#microphone","battery","clock"],
+
+    "temperature": {
+       "margin-left": 10,        
+       "hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",                                 
+       "input-filename": "temp2_input",                                                            
+       "format": "🌡️{temperatureC}°C",
+       "critical-threshold": 75,       
+        "tooltip-format": "Temperature CPU: {temperatureC}°C\nCritical: 75°C"
+    }, 
+    "cpu": {
+        "format": "🧠{usage}%",
+        "interval": 2,
+        "tooltip-format": "Usage CPU: {usage}%\nFrequency: {avg_frequency} GHz"
+    },
+    "memory": {
+    "format": "🛢️{used}G",
+    "interval": 5
+    },
+    "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+        "1": "",
+        "2": "",
+        "3": "Qt",
+        "4": "",
+        "5": "",
+        "6": "",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "10": "10"
+    },
+        "on-click": "activate"
+    },
+    "tray": {
+		"icon-size": 18,
+		"spacing": 10
+    },
+    "battery": {
+        "format": "{icon}{capacity}%", 
+        "format-icons": {
+        "default": ["🔋"],
+        "charging": ["⚡"],
+        "full": ["🔌"],
+        "critical": ["⚠️"]
+        },
+        "tooltip-format": "Capacity: {capacity}%",
+        "interval": 5
+    },
+    "hyprland/language": {
+		"format": "{}",
+		"format-en": "en",
+	    "format-ru": "ru"
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{icon}{volume}%",
+        "format-muted": "🔇",
+        "format-icons": {
+            "default": ["📢"],
+        "muted": "🔇"
+        },
+        "tooltip-format": "Volume: {volume}%",
+        "on-click": "pamixer -t",
+        "on-scroll-up": "pamixer -i 5",
+        "on-scroll-down": "pamixer -d 5"
+    },
+      "pulseaudio#microphone": {
+        "format": "<span color='#f5c2e7'>{icon}</span>{format_source}",
+        "format-source": "🎙️{volume}%",
+        "format-source-muted": "󰍭",
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "on-scroll-up": "pactl set-source-volume @DEFAULT_SOURCE@ +5%",
+        "on-scroll-down": "pactl set-source-volume @DEFAULT_SOURCE@ -5%",
+        "tooltip": false,
+        "interval": 5
+    },
+    "network": {
+        "format-wifi": "<span color='#f5c2e7'> </span>{signalStrength}%",
+        "format-ethernet": "<span color='#f5c2e7'>󰈀 </span>",
+        "format-disconnected": "<span color='#f5c2e7'>󰖪 </span>",
+        "tooltip-format": "{essid}\n{ifname}: {ipaddr}/{cidr}\nDown: {bandwidthDownBytes} | Up: {bandwidthUpBytes}",
+        "interval": 5
+    },
+    "clock": {
+		"format": "<span color='#f5c2e7'>🕒</span> {:%H:%M}",
+		"tooltip-format": "<big><span color='#cdd6f4'>{:%Y %B}</span></big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "<span color='#eba0ac'>🗓️</span> <span color='#cdd6f4'>{:%Y-%m-%d}</span>",
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#cdd6f4'><b>{}</b></span>",
+                              "days":       "<span color='#cdd6f4'><b>{}</b></span>",
+                              "weeks":      "<span color='#f5c2e7'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#f5c2e7'><b>{}</b></span>",
+                              "today":      "<span color='#eba0ac'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    }
+}

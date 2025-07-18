@@ -1,0 +1,134 @@
+* {
+    font-family: JetBrainsMono, Symbols Nerd Font;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
+}
+
+@define-color bg2 transparent;
+@define-color bg #232136;
+@define-color fg #9ccfd8;
+@define-color pink #f5c2e7;
+@define-color red #eba0ac;
+@define-color white #ffffff;
+
+window#waybar {
+    border-radius: 20;
+    background-color: rgba(35,33,54, 0.7);
+    border: 2px solid @fg;
+}
+#workspaces,
+#custom-foot,
+#temperature,
+#cpu,
+#tray,
+#pulseaudio,
+#pulseaudio\\.microphone,
+#clock,
+#battery,
+#network,
+#custom-power {
+    padding: 0 5px;
+    margin: 2px 2px;
+    border-radius: 20;
+}
+
+#workspaces {
+    color: @fg;
+    background-color: @bg2;
+}
+#workspaces button {
+    padding: 0 5px;
+    color: @fg;
+}
+#workspaces button.active {
+    color: #ffffff;
+}
+#workspaces button:hover {
+    color: @white;
+}
+#window {
+    color: @white;
+    background-color: @bg2;
+}
+#temperature {
+    color: @fg;
+    background-color: @bg2;
+}
+#temperature:hover{
+    color: @white;
+}
+#cpu {
+    color: @fg;
+    background-color: @bg2;
+}   
+#cpu:hover{
+    color: @white;
+}
+#memory {
+    color: @fg;
+    background-color: @bg2;
+}
+#battery{
+    color: @fg;
+}
+#battery:hover{
+    color: @white;
+}
+#memory:hover{
+    color: @white;
+}
+#tray {
+    background-color: @bg2;
+}
+#language {
+    color: @fg;
+    background-color: @bg2;
+}
+#language:hover{
+    color: @white;
+}
+#pulseaudio {
+    color: @fg;
+    background-color: @bg2;
+}
+#pulseaudio.muted {
+    color: @red;
+}
+#pulseaudio:hover {
+    color: @white;
+}
+#network{
+    color: @fg;
+    background-color: @bg2;
+}
+#network:hover{
+    color: @white;
+}
+#clock {
+    color: @fg;
+    background-color: @bg2;
+}
+#clock:hover {
+    color: @white;
+}
+#network.disconnected {
+    color: @red;
+}
+#pulseaudio\\.microphone {
+    color: @fg;
+    background-color: @bg2;
+}
+#pulseaudio\\.microphone.muted {
+    color: @red;
+}
+#pulseaudio\\.microphone:hover{
+    color: @white;
+}
+tooltip {
+    background: @bg;
+    margin: 10px;
+    padding: 10px;
+    border: 10px solid rgba(100, 114, 125, 0);
+    border-radius: 10px;
+}
