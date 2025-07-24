@@ -5,7 +5,7 @@
 
 	"modules-center": ["hyprland/workspaces"],
     "modules-left": ["temperature","cpu","memory","network","tray"],
-	"modules-right": ["hyprland/language", "pulseaudio","pulseaudio#microphone","battery","clock"],
+	"modules-right": ["hyprland/language", "custom/audio","pulseaudio#microphone","battery","clock"],
 
     "temperature": {
        "margin-left": 10,        
@@ -60,15 +60,10 @@
 		"format-en": "en",
 	    "format-ru": "ru"
     },
-    "pulseaudio": {
-        "scroll-step": 5,
-        "format": "{icon}{volume}%",
-        "format-muted": "🔇",
-        "format-icons": {
-            "default": ["📢"],
-        "muted": "🔇"
-        },
-        "tooltip-format": "Volume: {volume}%",
+    "custom/audio": {
+        "exec": "~/.config/waybar/audio-status.sh",
+        "return-type": "json",
+        "interval": 2,
         "on-click": "pamixer -t",
         "on-scroll-up": "pamixer -i 5",
         "on-scroll-down": "pamixer -d 5"

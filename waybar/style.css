@@ -22,7 +22,7 @@ window#waybar {
 #temperature,
 #cpu,
 #tray,
-#pulseaudio,
+#custom\\.audio,
 #pulseaudio\\.microphone,
 #clock,
 #battery,
@@ -88,14 +88,14 @@ window#waybar {
 #language:hover{
     color: @white;
 }
-#pulseaudio {
+#custom\\.audio {
     color: @fg;
     background-color: @bg2;
 }
-#pulseaudio.muted {
+#custom\\.audio.muted {
     color: @red;
 }
-#pulseaudio:hover {
+#custom\\.audio:hover {
     color: @white;
 }
 #network{
