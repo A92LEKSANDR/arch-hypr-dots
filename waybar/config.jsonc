@@ -21,24 +21,11 @@
         "tooltip-format": "Usage CPU: {usage}%\nFrequency: {avg_frequency} GHz"
     },
     "memory": {
-    "format": "🛢️{used}G",
-    "interval": 5
+        "format": "🛢️{used}G",
+        "interval": 5
     },
     "hyprland/workspaces": {
-    "format": "{icon}",
-    "format-icons": {
-        "1": "",
-        "2": "",
-        "3": "Qt",
-        "4": "",
-        "5": "",
-        "6": "",
-        "7": "7",
-        "8": "8",
-        "9": "9",
-        "10": "10"
-    },
-        "on-click": "activate"
+        "format": "{id}"
     },
     "tray": {
 		"icon-size": 18,
@@ -79,10 +66,11 @@
         "interval": 5
     },
     "network": {
+        "format": "<span color='#f5c2e7'>󰈀 </span>",  // fallback — для Ethernet
         "format-wifi": "<span color='#f5c2e7'> </span>{signalStrength}%",
         "format-ethernet": "<span color='#f5c2e7'>󰈀 </span>",
-        "format-disconnected": "<span color='#f5c2e7'>󰖪 </span>",
-        "tooltip-format": "{essid}\n{ifname}: {ipaddr}/{cidr}\nDown: {bandwidthDownBytes} | Up: {bandwidthUpBytes}",
+        "format-disconnected": "<span color='#f5c2e7'>󰖪 </span> Disconnected",
+        "tooltip-format": "{ifname}: {ipaddr}/{cidr}",
         "interval": 5
     },
     "clock": {
