@@ -1,8 +1,6 @@
 width=600
-height=500
+height=400
 location=center
 promtp=Apps
 no_actions=true
-show-icons=true
-icon-size=24
 
