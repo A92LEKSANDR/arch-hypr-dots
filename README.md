@@ -6,7 +6,7 @@
     <img src="src.png" width="49%" />
     <img src="src2.png" width="49%" /> 
     <img src="wofi_scr.png" widht=49% />
-    <img src="wofi_scr1.png" widht=49% />
+    <img src="wofi_scr2.png" widht=49% />
 </p>
 
 ## Состав системы
